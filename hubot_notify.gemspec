@@ -20,15 +20,15 @@ Gem::Specification.new do |s|
     "Gemfile.lock",
     "README.md",
     "Rakefile",
-    "app/controllers/foreman_plugin_template/hosts_controller.rb",
-    "app/models/foreman_plugin_template/host_extensions.rb",
-    "app/views/foreman_plugin_template/hosts/new_action.html.erb",
-    "app/views/foreman_plugin_template/layouts/new_layout.html.erb",
+    "app/controllers/hubot_notify/hosts_controller.rb",
+    "app/models/hubot_notify/host_extensions.rb",
+    "app/views/hubot_notify/hosts/new_action.html.erb",
+    "app/views/hubot_notify/layouts/new_layout.html.erb",
     "config/routes.rb",
-    "lib/engine.rb",
-    "lib/foreman_plugin_template.rb"
+    "lib/hubot_notify/engine.rb",
+    "lib/hubot_notify.rb"
   ]
-  s.homepage = "http://github.com/isratrade/foreman_plugin_template"
+  s.homepage = "http://github.com/GregSutcliffe/hubot_notify"
   s.licenses = ["GPL-3"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.24"
