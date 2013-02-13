@@ -17,7 +17,7 @@ module HubotNotify
 
 		  def do_something_special_after_build
 		    logger.info "Logging build started to IRC"
-        # This actually seems to get run at the end...
+        # This is run when Build button is clicked - so doesn't fire on New Host
         uri = URI('http://ircbot:8080/hubot/irc')
         Net::HTTP.post_form(uri, 'message' => "Host build started: #{@host.name}")
 		  end

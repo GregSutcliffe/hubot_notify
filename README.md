@@ -1,19 +1,19 @@
-# foreman_plugin_template
+# hubot_notify
 
-Readme goes here
-
+A simple plugin to send and HTTP message (via POST) to a webservice (hubot)
+for reposting to IRC
 
 # Installation:
 
+Add to Gemfile as usual
 
 # Usage
 
+Edit host_extensions.rb and change the web uri as appropriate
 
 # Copyright
 
-[Update copyright accordingly.  GPLv3 is used as Foreman itself is.]
-
-Copyright (c) 2012-2013 Red Hat Inc.
+Copyright (c) 2012-2013 Greg Sutcliffe
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
