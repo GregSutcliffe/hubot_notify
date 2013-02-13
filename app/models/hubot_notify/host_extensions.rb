@@ -5,6 +5,8 @@ module HubotNotify
 	  extend ActiveSupport::Concern
 
 	  included do
+      require 'net/http'
+
 		  #execute standard callbacks
 		  #after_create :do_this
 		  #after_destroy :do_that
@@ -14,11 +16,17 @@ module HubotNotify
       before_provision :do_this_before_provision
 
 		  def do_something_special_after_build
-		    logger.info "doing customized callback something special AFTER build"
+		    logger.info "Logging build started to IRC"
+        # This actually seems to get run at the end...
+        uri = URI('http://ircbot:8080/hubot/irc')
+        Net::HTTP.post_form(uri, 'message' => "Host build started: #{@host.name}")
 		  end
 
 		  def do_this_before_provision
-		  	logger.info "doing this before provision"
+		    logger.info "Logging build complete to IRC"
+        # This actually seems to get run at the end...
+        uri = URI('http://ircbot:8080/hubot/irc')
+        Net::HTTP.post_form(uri, 'message' => "Host build complete: #{@host.name}")
 		  end
 
 		end
