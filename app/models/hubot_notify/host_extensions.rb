@@ -14,11 +14,11 @@ module HubotNotify
       before_provision :do_this_before_provision
 
 		  def do_something_special_after_build
-		    p "doing customized callback something special AFTER build"
+		    logger.info "doing customized callback something special AFTER build"
 		  end
 
 		  def do_this_before_provision
-		  	p "doing this before provision"
+		  	logger.info "doing this before provision"
 		  end
 
 		end
