@@ -20,11 +20,7 @@ Gem::Specification.new do |s|
     "Gemfile.lock",
     "README.md",
     "Rakefile",
-    "app/controllers/hubot_notify/hosts_controller.rb",
     "app/models/hubot_notify/host_extensions.rb",
-    "app/views/hubot_notify/hosts/new_action.html.erb",
-    "app/views/hubot_notify/layouts/new_layout.html.erb",
-    "config/routes.rb",
     "lib/hubot_notify/engine.rb",
     "lib/hubot_notify.rb"
   ]
