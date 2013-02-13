@@ -34,5 +34,6 @@ module HubotNotify
 	# 	  end
 	# 	  # or overwrite existing method
 	# 	end
-	# end
+
+	end
 end
