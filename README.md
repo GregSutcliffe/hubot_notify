@@ -5,11 +5,13 @@ for reposting to IRC
 
 # Installation:
 
-Add to Gemfile as usual
+gem 'hubot_notify', :git => "https://github.com/GregSutcliffe/hubot_notify.git"
 
 # Usage
 
 Edit host_extensions.rb and change the web uri as appropriate
+
+The file _irc.coffee_ is a simple example plugin for hubot that will output to IRC.
 
 # Copyright
 
