@@ -16,13 +16,14 @@ Gem::Specification.new do |s|
     "README.md"
   ]
   s.files = [
+    "app/controllers/hubot_notify/unattended_controller.rb",
+    "app/models/hubot_notify/host_extensions.rb",
     "Gemfile",
     "Gemfile.lock",
-    "README.md",
-    "Rakefile",
-    "app/models/hubot_notify/host_extensions.rb",
     "lib/hubot_notify/engine.rb",
-    "lib/hubot_notify.rb"
+    "lib/hubot_notify.rb",
+    "Rakefile",
+    "README.md"
   ]
   s.homepage = "http://github.com/GregSutcliffe/hubot_notify"
   s.licenses = ["GPL-3"]
