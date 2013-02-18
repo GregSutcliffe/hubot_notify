@@ -13,9 +13,9 @@ module HubotNotify
 
 		  def notify_on_built
         # This actually seems to get run at the end... despite being called 'before'
-		    logger.info "Logging build complete to IRC"
-        uri = URI('http://ircbot:8080/hubot/irc')
-        Net::HTTP.post_form(uri, 'message' => "Host build complete: #{@host.name}")
+		    logger.info "Logging build complete to IRC from host"
+        #uri = URI('http://ircbot:8080/hubot/irc')
+        #Net::HTTP.post_form(uri, 'message' => "Host build complete: #{@host.name}")
 		  end
 
 		end

@@ -5,7 +5,7 @@ module HubotNotify
     extend ActiveSupport::Concern
 
     included do
-      after_filter :hubot_unattended, :only => [:provision,:finish]
+      after_filter :hubot_unattended, :only => [:provision,:finish,:built]
 
       private
 
