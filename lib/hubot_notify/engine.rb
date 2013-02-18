@@ -8,7 +8,6 @@ module HubotNotify
     # Include extensions to models in this config.to_prepare block
     config.to_prepare do
       #Example: Include host extenstions
-      ::Host.send :include, HubotNotify::HostExtensions
       ::UnattendedController.send :include, HubotNotify::UnattendedControllerExtensions
     end
 
