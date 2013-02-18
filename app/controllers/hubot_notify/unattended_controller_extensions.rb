@@ -11,8 +11,15 @@ module HubotNotify
 
       def hubot_unattended
         logger.debug "Extending UnattendedController in HubotNotify#hubot_unattended"
+
+        if params['action'] == 'built'
+          message = "Host build complete"
+        else
+          message = "#{params['action'].capitalize} template requested"
+        end
+
         uri = URI('http://ircbot:8080/hubot/irc')
-        Net::HTTP.post_form(uri, 'message' => "#{params['action'].capitalize} template requested: #{@host.name}")
+        Net::HTTP.post_form(uri, 'message' => "#{@host.name}: #{message}")
       end
 
     end
