@@ -1,3 +1,5 @@
+require 'net/http'
+
 # Ensure that module is namespaced with plugin name
 module HubotNotify
 	# Example: Create new instance and class methods on Foreman's Host model
@@ -5,11 +7,6 @@ module HubotNotify
 	  extend ActiveSupport::Concern
 
 	  included do
-      require 'net/http'
-
-		  #execute standard callbacks
-		  #after_create :do_this
-		  #after_destroy :do_that
 
 		  #execute custom hooks
       before_provision :notify_on_built

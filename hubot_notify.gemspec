@@ -5,19 +5,20 @@
 
 Gem::Specification.new do |s|
   s.name = "hubot_notify"
-  s.version = ""
+  s.version = "0.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Sample Name"]
-  s.date = "2012-12-13"
-  s.description = "Plugin engine for Foreman "
-  s.email = "name@example.com"
+  s.authors = ["Greg Sutcliffe"]
+  s.date = "2013-02-18"
+  s.description = "IRC Plugin for Foreman"
+  s.email = "greg.sutcliffe@gmail.com"
   s.extra_rdoc_files = [
     "README.md"
   ]
   s.files = [
-    "app/controllers/hubot_notify/unattended_controller.rb",
+    "app/controllers/hubot_notify/unattended_controller_extensions.rb",
     "app/models/hubot_notify/host_extensions.rb",
+    "config/routes.rb",
     "Gemfile",
     "Gemfile.lock",
     "lib/hubot_notify/engine.rb",

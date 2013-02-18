@@ -5,10 +5,11 @@ module HubotNotify
   #Thus, inhereits from ::Rails::Engine and not from Rails::Engine
   class Engine < ::Rails::Engine
 
-	# Include extenstions to models in this config.to_prepare block
+    # Include extensions to models in this config.to_prepare block
     config.to_prepare do
-       #Example: Include host extenstions
-       ::Host.send :include, HubotNotify::HostExtensions
+      #Example: Include host extenstions
+      ::Host.send :include, HubotNotify::HostExtensions
+      ::UnattendedController.send :include, HubotNotify::UnattendedControllerExtensions
     end
 
   end
