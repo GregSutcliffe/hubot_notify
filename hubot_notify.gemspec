@@ -18,7 +18,6 @@ Gem::Specification.new do |s|
   s.files = [
     "app/controllers/hubot_notify/unattended_controller_extensions.rb",
     "app/models/hubot_notify/host_extensions.rb",
-    "config/routes.rb",
     "Gemfile",
     "Gemfile.lock",
     "lib/hubot_notify/engine.rb",

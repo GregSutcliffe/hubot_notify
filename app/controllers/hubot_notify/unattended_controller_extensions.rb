@@ -10,8 +10,9 @@ module HubotNotify
       private
 
       def hubot_unattended
-        logger.info "foo: #{params.inspect}"
-        logger.info "Unattended script requested: #{@host.name}"
+        logger.debug "Extending UnattendedController in HubotNotify#hubot_unattended"
+        uri = URI('http://ircbot:8080/hubot/irc')
+        Net::HTTP.post_form(uri, 'message' => "#{params['action'].capitalize} template requested: #{@host.name}")
       end
 
     end
