@@ -18,8 +18,10 @@ module HubotNotify
           message = "#{params['action'].capitalize} template requested"
         end
 
-        uri = URI('http://ircbot:8080/hubot/irc')
-        Net::HTTP.post_form(uri, 'message' => "#{@host.name}: #{message}")
+        if SETTINGS[:hubot][:enabled]
+          address = SETTINGS[:hubot][:address] || 'http://ircbot/hubot'
+          Net::HTTP.post_form(URI(address), 'message' => "#{@host.name}: #{message}")
+        end
       end
 
     end

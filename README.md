@@ -5,23 +5,28 @@ for reposting to IRC
 
 # Installation:
 
-Fork the repo and change unattended\_controller\_extensions.rb to send to the
-correct hostname and port:
+Add to bundler.d/Gemfile.local.rb as:
 
-    uri = URI('http://ircbot:8080/hubot/irc')
+    gem 'hubot\_notify', :git => 'https://github.com/GregSutcliffe/hubot\_notify.git'
 
-Then require your fork in Foreman:
-
-    bundler.d/Gemfile.local.rb:
-    gem 'hubot\_notify', :git => "https://github.com/GregSutcliffe/hubot\_notify.git"
-
-Update & Restart Foreman:
+then update & restart Foreman:
 
     bundle update
 
-# Usage
+# Usage:
 
-Build a new host, and check you get a message in IRC from your bot
+
+Add to your Foreman `config/settings.yaml`:
+
+```yaml
+:hubot:
+  :enabled: true
+  :address: 'http://ircbot:8080/hubot/irc'
+```
+
+You will also need a listening Hubot (see below for a sample listener script)
+
+Build a new host, and check you get a message in IRC from your bot.
 
 # Setting up Hubot
 
@@ -62,8 +67,7 @@ You probably want to either background this with nohup or run it in a screen
 
 # TODO
 
-* Add settings to Foreman so you don't have to fork the gem
-* Add more stages to notify on
+* Add settings to the HTTP POST so they don't have to be hardcoded in _irc.coffee_
 * Support other bots?
 
 # Copyright
