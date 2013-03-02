@@ -16,14 +16,13 @@ Gem::Specification.new do |s|
     "README.md"
   ]
   s.files = [
-    "app/controllers/hubot_notify/unattended_controller_extensions.rb",
-    "app/models/hubot_notify/host_extensions.rb",
     "Gemfile",
     "Gemfile.lock",
-    "lib/hubot_notify/engine.rb",
-    "lib/hubot_notify.rb",
+    "README.md",
     "Rakefile",
-    "README.md"
+    "app/controllers/hubot_notify/unattended_controller_extensions.rb",
+    "lib/hubot_notify.rb",
+    "lib/hubot_notify/engine.rb"
   ]
   s.homepage = "http://github.com/GregSutcliffe/hubot_notify"
   s.licenses = ["GPL-3"]
@@ -46,4 +45,3 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<jeweler>, [">= 0"])
   end
 end
-
